@@ -22,3 +22,4 @@ public class MyFirstScript : MonoBehaviour
         // mat.color = colour;
     }
 }
+
