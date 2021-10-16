@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     /*
      * TODO:
      *    [✔] Handle Keyboard Input
