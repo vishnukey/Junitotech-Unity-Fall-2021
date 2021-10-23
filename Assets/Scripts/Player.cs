@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     public int maxHealth;
-    
+
     private float _health;
     private PlayerInput _input;
 
@@ -23,22 +23,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(float amnt)
     {
         _health -= amnt;
         healthText.text = $"health: {_health}";
-    }
-
-    public void OnThrow(/*InputValue value*/)
-    {
-        Debug.Log($"THROW");
-    }
-
-    public void OnPunch(/*InputValue value*/)
-    {
-        Debug.Log($"PUNCH");
     }
 }
