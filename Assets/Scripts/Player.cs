@@ -10,20 +10,19 @@ public class Player : MonoBehaviour
     public int maxHealth;
 
     private float _health;
-    private PlayerInput _input;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         _health = maxHealth;
         healthText.text = $"health: {_health}";
-        _input = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void TakeDamage(float amnt)
