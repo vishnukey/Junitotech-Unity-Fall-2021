@@ -28,6 +28,12 @@ public class Teleporter : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(telePoint.position, destination.telePoint.position);
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))

@@ -30,4 +30,14 @@ public class Player : MonoBehaviour
         _health -= amnt;
         healthText.text = $"health: {_health}";
     }
+
+    public void OnThrow()
+    {
+        Debug.Log("Throwing!");
+    }
+
+    public void OnPunch()
+    {
+        Debug.Log("Punching!");
+    }
 }

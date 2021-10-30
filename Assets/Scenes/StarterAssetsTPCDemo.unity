@@ -302,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 1925873226565265918, guid: 2553cec8fdb3eb643bbe9f2ec880c472, type: 3}
       propertyPath: m_Actions
       value: 
-      objectReference: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+      objectReference: {fileID: -944628639613478452, guid: 8e047b36f0d92a942a8e03aac61ff731, type: 3}
     - target: {fileID: 7292828519420468114, guid: 2553cec8fdb3eb643bbe9f2ec880c472, type: 3}
       propertyPath: canPush
       value: 1
@@ -1096,7 +1096,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1116,7 +1116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1733e0bc01eca7a4280a620c65400755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 10
+  radius: 10
+  reach: 1.5
+  attackCooldown: 3
+  strength: 5
 --- !u!1 &1061939104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmnt: 10
-  damageTimeout: 0
+  damageTimeout: 3
 --- !u!65 &1309017662
 BoxCollider:
   m_ObjectHideFlags: 0
