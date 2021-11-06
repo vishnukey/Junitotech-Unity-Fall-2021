@@ -27,7 +27,7 @@ public class Mover : MonoBehaviour
             end.position,
             (-Mathf.Cos(t) + 1) / 2
         );
-        //transform.position = newPos;
+        transform.position = newPos;
         _body.MovePosition(newPos);
     }
 }

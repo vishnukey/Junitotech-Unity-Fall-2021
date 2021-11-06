@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,5 +35,15 @@ public class Coin : MonoBehaviour
             );
 
         transform.rotation = Quaternion.Euler(0, _time * rotSpeed, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var player = other.gameObject.GetComponent<Player>();
+        if (!(player is null))
+        {
+            player.AddCoin();
+            Destroy(gameObject);
+        }
     }
 }
