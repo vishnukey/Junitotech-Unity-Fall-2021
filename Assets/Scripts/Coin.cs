@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,10 @@ using UnityEngine.Serialization;
 
 public class Coin : MonoBehaviour
 {
-
     public float bobOffset;
-    [FormerlySerializedAs("bobSpeed")] public float bobPeriod;
+    public float bobPeriod;
     public float rotSpeed;
+    public int value = 1;
 
     private Vector3 _startPos;
     private Vector3 _peak;
@@ -31,8 +32,18 @@ public class Coin : MonoBehaviour
             _peak,
             _base,
             (-Mathf.Cos(_time * bobPeriod) + 1) / 2
-            );
+        );
 
         transform.rotation = Quaternion.Euler(0, _time * rotSpeed, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Player player = other.GetComponent<Player>();
+            player.AddScore(value);
+            Destroy(gameObject);
+        }
     }
 }
