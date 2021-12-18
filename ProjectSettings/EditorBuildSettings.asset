@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Snowman.unity
     guid: d830eba9001b4bd4094d4089cad8a77c
+  - enabled: 1
+    path: Assets/Scenes/Platformer.unity
+    guid: a79eabcfbb51afe458d137e5ec12f021
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e35c1fa948c9a474ab85102c21996630, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 02bf57c336aa72449aaaa1765c61b2bc, type: 2}
